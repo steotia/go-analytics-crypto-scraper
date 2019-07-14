@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"io/ioutil"
 	"net/http"
@@ -68,6 +69,11 @@ func configure() (*viper.Viper, error) {
 	v.SetConfigType("yml")
 	err := v.ReadInConfig() // Find and read the config file
 	return v, err
+}
+
+func init() {
+	flag.Parse()
+	flag.Lookup("logtostderr").Value.Set("true")
 }
 
 func main() {
