@@ -1,3 +1,5 @@
+[![Go Report Card](https://goreportcard.com/badge/github.com/steotia/go-analytics-crypto-scraper)](https://goreportcard.com/report/github.com/steotia/go-analytics-crypto-scraper)
+
 # go-analytics-crypto-scraper
 
 This is a library which gets cryptocurrency exchange rates for a pair of currencies. The data fetched is stored in MongoDB at a 5 min interval.
