@@ -1,6 +1,4 @@
-[![Go Report Card](https://goreportcard.com/badge/github.com/steotia/go-analytics-crypto-scraper)](https://goreportcard.com/report/github.com/steotia/go-analytics-crypto-scraper)
-
-[![Maintainability](https://api.codeclimate.com/v1/badges/2735355a910e90726a53/maintainability)](https://codeclimate.com/github/steotia/go-analytics-crypto-scraper/maintainability)
+[![Go Report Card](https://goreportcard.com/badge/github.com/steotia/go-analytics-crypto-scraper)](https://goreportcard.com/report/github.com/steotia/go-analytics-crypto-scraper) [![Maintainability](https://api.codeclimate.com/v1/badges/2735355a910e90726a53/maintainability)](https://codeclimate.com/github/steotia/go-analytics-crypto-scraper/maintainability)
 
 # go-analytics-crypto-scraper
 
