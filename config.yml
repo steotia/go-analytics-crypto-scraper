@@ -1,0 +1,14 @@
+version: '1.0'
+
+scrape:
+  marketpairs:
+    - BTC-ADA
+    - ETH-ADA
+    - BTC-MUSIC
+    - BTC-ETH
+  size:
+    bytebuffer: 10
+    parsedjson: 10
+  timeout:
+    http: 10
+

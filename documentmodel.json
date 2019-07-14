@@ -1,0 +1,18 @@
+{
+"date": "",
+"market_pair": "USD-ADA",
+"hours": {
+    "00": {
+        "minutes": {
+            "00": {
+                "scraped": true,
+                "high": 2e-8,
+                "low": 1e-8,
+                "volume": 19859503.82701364,
+                "created": "2017-03-27T19:59:13.073Z",
+                "timestamp": "2019-07-10T03:00:00"
+            }
+        } 
+    }
+}
+}

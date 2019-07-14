@@ -1,0 +1,41 @@
+version: '3.1'
+
+services:
+
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - '27100:27017'
+    networks: 
+      - backend
+
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    networks: 
+      - backend
+
+  go-analytics-crypto-scraper:
+    image: go-analytics-crypto-scraper
+    restart: always
+    depends_on:
+      - mongo
+    networks: 
+      - backend
+  
+  go-analytics-crypto-api:
+    image: go-analytics-crypto-api
+    restart: always
+    ports:
+      - '12345:12345'
+    depends_on:
+      - mongo
+    networks: 
+      - backend
+
+networks:
+  backend:
+    driver: "bridge"
