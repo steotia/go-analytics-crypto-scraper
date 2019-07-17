@@ -16,6 +16,7 @@ const (
 	httpTimeoutInSec = 10
 	byteBufferSize   = 10
 	jsonBufferSize   = 10
+	scrapePeriod     = 1
 )
 
 func (e HTTPScraper) Scrape() {
@@ -112,6 +113,7 @@ func setDefaults(config *viper.Viper) {
 	config.SetDefault("scrape.timeout.http", httpTimeoutInSec)
 	config.SetDefault("scrape.size.bytebuffer", byteBufferSize)
 	config.SetDefault("scrape.size.jsonbuffer", jsonBufferSize)
+	config.SetDefault("scrape.period", scrapePeriod)
 }
 
 func NewHTTPScraper(config *viper.Viper) *HTTPScraper {
@@ -121,6 +123,7 @@ func NewHTTPScraper(config *viper.Viper) *HTTPScraper {
 	bSize := config.GetInt("scrape.size.bytebuffer")
 	jSize := config.GetInt("scrape.size.jsonbuffer")
 	markets := config.GetStringSlice("scrape.marketpairs")
+	scrapePeriod := config.GetInt("scrape.period")
 
 	client, err := GetMongoDBClient()
 	if err != nil {
@@ -141,5 +144,6 @@ func NewHTTPScraper(config *viper.Viper) *HTTPScraper {
 		marketDataStream: marketDataStream,
 		rawbytetream:     bytetream,
 		dbclient:         client,
+		scrapePeriod:     scrapePeriod,
 	}
 }

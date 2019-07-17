@@ -56,9 +56,10 @@ type HTTPScraper struct {
 	marketDataStream chan MarketData
 	rawbytetream     chan []byte
 	dbclient         *mongo.Client
+	scrapePeriod     int
 }
 
-type Scrapeable interface {
+type Scrape interface {
 	Scrape()
 }
 
