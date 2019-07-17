@@ -15,7 +15,7 @@ scrape:
     - BTC-MUSIC
     - BTC-ETH
 ```
-one can add or remove the currency pairs as required.
+one can add or remove the currency pairs as required!
 
 ## Data Model
 Each document obtained by hitting the summary API (Bittrex), does not create a unique document in Mongo. Instead, the time series data,
@@ -40,6 +40,8 @@ looks like...
     }
 }
 ```
+
+You can visit http://localhost:8081/db/cryptocurrencies/marketvalues to have a look at persisted documents.
 
 ## Installation
 The runtime is Dockerised, so the only requirement is having docker running on the system. So, just run
