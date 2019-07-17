@@ -2,7 +2,7 @@
 
 # go-analytics-crypto-scraper
 
-This is a library which gets cryptocurrency exchange rates for a pair of currencies. The data fetched is stored in MongoDB at a 5 min interval.
+This is a library which gets cryptocurrency exchange rates for a pair of currencies. The data fetched is stored in MongoDB at a configurable 5 min interval. The calls are non blocking.
 
 ## Configuration
 
@@ -42,4 +42,19 @@ looks like...
 ```
 
 ## Installation
-The runtime is Dockerised, so the only requirement is having docker running on the system. 
+The runtime is Dockerised, so the only requirement is having docker running on the system. So, just run
+
+```docker-compose -f stack.yml up```
+
+## Configuration
+If there are any code or configuration changes, simply do 
+
+```docker build -t go-analytics-crypto-scraper -f Dockerfile .``` 
+
+to update the local docker image and then install as mentioned above.
+
+## TODO
+- Scraper code quality can be better.
+- Scraping starts N ticks AFTER server start, can change it to immediately start
+- Tests!
+
