@@ -16,7 +16,7 @@ const (
 	httpTimeoutInSec = 10
 	byteBufferSize   = 10
 	jsonBufferSize   = 10
-	scrapePeriod     = 5
+	scrapePeriod     = 300
 )
 
 func (e HTTPScraper) Scrape() {
