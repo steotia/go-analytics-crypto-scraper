@@ -54,6 +54,7 @@ If there are any code or configuration changes, simply do
 to update the local docker image and then install as mentioned above.
 
 ## TODO
+- Better code packaging! API code is better packaged.
 - Scraper code quality can be better.
 - Scraping starts N ticks AFTER server start, can change it to immediately start
 - Tests!
