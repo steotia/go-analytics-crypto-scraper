@@ -1,7 +1,7 @@
 version: '1.0'
 
 scrape:
-  period: 3
+  period: 5
   marketpairs:
     - BTC-ADA
     - ETH-ADA

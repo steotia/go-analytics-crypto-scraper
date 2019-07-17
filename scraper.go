@@ -16,11 +16,11 @@ const (
 	httpTimeoutInSec = 10
 	byteBufferSize   = 10
 	jsonBufferSize   = 10
-	scrapePeriod     = 1
+	scrapePeriod     = 5
 )
 
 func (e HTTPScraper) Scrape() {
-	uptimeTicker := time.NewTicker(1 * time.Minute)
+	uptimeTicker := time.NewTicker(time.Duration(e.scrapePeriod) * time.Minute)
 	for {
 		select {
 		// TODO Quit and close connections etc
