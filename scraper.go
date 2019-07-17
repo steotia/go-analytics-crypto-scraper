@@ -20,7 +20,7 @@ const (
 )
 
 func (e HTTPScraper) Scrape() {
-	uptimeTicker := time.NewTicker(time.Duration(e.scrapePeriod) * time.Minute)
+	uptimeTicker := time.NewTicker(time.Duration(e.scrapePeriod) * time.Second)
 	for {
 		select {
 		// TODO Quit and close connections etc
