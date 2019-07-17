@@ -4,6 +4,8 @@
 
 This is a library which gets cryptocurrency exchange rates for a pair of currencies. The data fetched is stored in MongoDB at a configurable 5 min interval. The calls are non blocking.
 
+NOTE: Scraper starts AFTER 5 mins of server start or as configured in the `config.yml`
+
 ## Configuration
 
 Check out the `config.yml` file for configuration options. Most notably,
